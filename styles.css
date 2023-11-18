@@ -1,0 +1,376 @@
+
+body {
+  background-color: #dedde6;
+}
+
+/* Style the memory game container */
+.memory-game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: url('path/to/background-image.jpg'); /* Add a background image */
+}
+
+#game-board {
+  perspective: 1000px;
+}
+
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* adjust as needed */
+  width: 150px; /* adjust as needed */
+  border: 2px solid #0000000; /* optional, to see the card boundaries */
+}
+
+/* Style the game cards */
+.card img {
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.6s, box-shadow 0.3s; /* Add transition effects */
+}
+
+
+/* Style the game card front and back */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.card-back {
+  background-color: #333;
+  border-radius: 10px;
+  /* Add shadow or glow effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Add a flip animation to the game cards */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Add a hover effect to the game cards */
+.card:hover .card-front {
+  background-color: #dedde6;
+  /* Add animation or transition effect */
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the memory game cards */
+.memory-card {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  perspective: 1000px;
+  border: 2px solid #333;
+  background: linear-gradient(45deg, #f2f2f2, #dedde6);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer; /* Added cursor pointer */
+  transition: transform 0.6s, box-shadow 0.3s; /* Add transition effects */
+}
+
+/* Style the memory game card front and back */
+.memory-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.memory-card-front,
+.memory-card-back {
+  position: absolute;
+  /* Add decorative elements or icons */
+  background-image: url('path/to/decorative-element.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.memory-card-front {
+  /* Add different font or typography style */
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.memory-card-back {
+  background-color: #333;
+  border-radius: 10px;
+  /* Add shadow or glow effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Add a hover effect to the memory game cards */
+.memory-card:hover .memory-card-front {
+  /* Add animation or transition effect */
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the game board */
+#game-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  /* Add background color or image */
+  background-color: #f9f9f9;
+  background-image: url('path/to/background-image.jpg');
+  background-repeat: repeat;
+}
+
+/* Style the game board */
+#game-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style the game cards */
+.card {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  perspective: 1000px;
+  border: 2px solid #333;
+  background: linear-gradient(45deg, #f2f2f2, #dedde6);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Style the game card front and back */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.card-back {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+/* Add a flip animation to the game cards */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Add a hover effect to the game cards */
+.card:hover .card-front {
+  background-color: #dedde6;
+}
+
+/* Style the memory game cards */
+.memory-card {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  perspective: 1000px;
+  border: 2px solid #333;
+  background: linear-gradient(45deg, #f2f2f2, #dedde6);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer; /* Added cursor pointer */
+}
+
+/* Style the memory game card front and back */
+.memory-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.memory-card-front,
+.memory-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.memory-card-front {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.memory-card-back {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+/* Add a flip animation to the memory game cards */
+.memory-card.flipped .memory-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Add a fade-in animation to the memory game cards */
+.memory-card.fade-in {
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+/* Add a hover effect to the memory game cards */
+.memory-card:hover .memory-card-front {
+  background-color: #dedde6;
+}
+
+/* Style the memory game container */
+.memory-game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.card.flipped {
+  animation: fadeIn 0.7s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.card.shake {
+  animation: shake 0.7s;
+}
+
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+/* First, add a perspective to the card container in your CSS:
+ */
+#game-board {
+  perspective: 1000px;
+}
+
+/* set the card to be a 3D space for its children:
+ */
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+/* Adding a class for when the card is flipped:
+ */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Finally, set the front and back of the card:
+ */
+.card > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card > img:first-child {
+  transform: rotateY(180deg);
+}
